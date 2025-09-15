@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj3mye38k1iih"]
+[gd_scene load_steps=3 format=3 uid="uid://dj3mye38k1iih"]
+
+[ext_resource type="PackedScene" uid="uid://wiy6fppa3nfc" path="res://scenes/player.tscn" id="1_o5qli"]
 
 [sub_resource type="TileSet" id="TileSet_sgp6g"]
 
@@ -6,3 +8,5 @@
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_sgp6g")
+
+[node name="Player" parent="." instance=ExtResource("1_o5qli")]
