@@ -1,4 +1,5 @@
-res://assets/Mario
 res://Scripts
-res://Resources/CollisionShapes
+res://assets/enemies/enemies
 res://scenes
+res://assets/Mario
+res://Resources/CollisionShapes

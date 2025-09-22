@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dj3mye38k1iih"]
+[gd_scene load_steps=5 format=3 uid="uid://dj3mye38k1iih"]
 
 [ext_resource type="PackedScene" uid="uid://wiy6fppa3nfc" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://bhbtmomr8xjfs" path="res://scenes/koopa.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://b78m1yqc8bjoi" path="res://scenes/goomba.tscn" id="3_jyhfs"]
 
 [sub_resource type="TileSet" id="TileSet_sgp6g"]
 
@@ -10,3 +12,11 @@
 tile_set = SubResource("TileSet_sgp6g")
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
+
+[node name="enemies" type="Node" parent="."]
+
+[node name="Koopa" parent="enemies" instance=ExtResource("2_sugp2")]
+position = Vector2(84, 24)
+
+[node name="Goomba" parent="enemies" instance=ExtResource("3_jyhfs")]
+position = Vector2(44, 25)
