@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bhbtmomr8xjfs"]
 
+[ext_resource type="Script" uid="uid://c6gqe0d4jmftp" path="res://Scripts/koopa.gd" id="1_k1qtu"]
 [ext_resource type="Texture2D" uid="uid://iluwoo5eicyi" path="res://assets/enemies/enemies/Koopa_Shell.png" id="1_py2lt"]
 [ext_resource type="Texture2D" uid="uid://deqxjro85hc5l" path="res://assets/enemies/enemies/Koopa_Walk1.png" id="2_k1qtu"]
 [ext_resource type="Texture2D" uid="uid://wv4eq6sspap7" path="res://assets/enemies/enemies/Koopa_Walk2.png" id="3_xum81"]
-[ext_resource type="Script" uid="uid://bdiij1ufki7lx" path="res://Scripts/enemy.gd" id="4_k1qtu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_grttc"]
 animations = [{
@@ -31,7 +31,9 @@ animations = [{
 size = Vector2(15, 13)
 
 [node name="Koopa" type="Area2D"]
-script = ExtResource("4_k1qtu")
+script = ExtResource("1_k1qtu")
+horizontal_speed = null
+vertical_speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_grttc")
@@ -45,3 +47,5 @@ shape = SubResource("RectangleShape2D_xum81")
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 12)
 collision_mask = 18
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

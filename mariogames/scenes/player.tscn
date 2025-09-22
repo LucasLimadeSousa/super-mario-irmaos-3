@@ -155,7 +155,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 2
+collision_mask = 6
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tuyoq")
@@ -163,6 +163,7 @@ animation = &"andandoPequeno"
 frame_progress = 0.21118504
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_mask = 6
 
 [node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = ExtResource("2_qhqgy")

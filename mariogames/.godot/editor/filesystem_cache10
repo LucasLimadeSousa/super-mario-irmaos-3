@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1758538652
+::res://::1758541562
 ::res://assets/::1758537445
 icon.svg::CompressedTexture2D/CompressedTexture2D::7277595609209032994::1758537251::1758537445::1::::<><><>0<>0<>9e639f8f86a4fa70e7b48a53ae915300<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
 ::res://assets/enemies/::1758537251
@@ -18,11 +18,13 @@ mariotile.png::CompressedTexture2D/CompressedTexture2D::5913484755763086871::175
 ::res://Resources/::1758537251
 ::res://Resources/CollisionShapes/::1758537251
 small_mario.tres::RectangleShape2D::2463743171414319807::1758537251::0::1::::<><><>0<>0<><>::
-::res://scenes/::1758539378
-goomba.tscn::PackedScene::4701364465961129056::1758539503::0::1::::<><><>0<>0<><>::uid://cnhgp5cuyq1fy::::res://assets/enemies/enemies/Goomba_Flat.png<>uid://bdiij1ufki7lx::::res://Scripts/goomba.gd<>uid://ipnak52sqkfm::::res://assets/enemies/enemies/Goomba_Walk1.png<>uid://db1ik4up16coc::::res://assets/enemies/enemies/Goomba_Walk2.png
-main.tscn::PackedScene::7849535938763871431::1758537251::0::1::::<><><>0<>0<><>::uid://wiy6fppa3nfc::::res://scenes/player.tscn
-player.tscn::PackedScene::1562182435978101600::1758537251::0::1::::<><><>0<>0<><>::uid://cdw7hf64a6uph::::res://assets/Mario/mario.png<>uid://bbdpqwr67j8vj::::res://Resources/CollisionShapes/small_mario.tres
-koopa.tscn::PackedScene::2880982773984779976::1758539503::0::1::::<><><>0<>0<><>::uid://iluwoo5eicyi::::res://assets/enemies/enemies/Koopa_Shell.png<>uid://deqxjro85hc5l::::res://assets/enemies/enemies/Koopa_Walk1.png<>uid://wv4eq6sspap7::::res://assets/enemies/enemies/Koopa_Walk2.png<>uid://bdiij1ufki7lx::::res://Scripts/goomba.gd
-::res://Scripts/::1758538913
-goomba.gd::GDScript::2614005441471036557::1758538913::0::1::::Enemy<>Area2D<><>0<>0<><>::
+::res://scenes/::1758541562
+goomba.gd::GDScript::521352279698111624::1758540469::0::1::::<>Enemy<><>0<>0<><>::
+goomba.tscn::PackedScene::4701364465961129056::1758541567::0::1::::<><><>0<>0<><>::uid://cnhgp5cuyq1fy::::res://assets/enemies/enemies/Goomba_Flat.png<>uid://hosui3kxs2ki::::res://scenes/goomba.gd<>uid://ipnak52sqkfm::::res://assets/enemies/enemies/Goomba_Walk1.png<>uid://db1ik4up16coc::::res://assets/enemies/enemies/Goomba_Walk2.png
+koopa.tscn::PackedScene::2880982773984779976::1758541562::0::1::::<><><>0<>0<><>::uid://c6gqe0d4jmftp::::res://Scripts/koopa.gd<>uid://iluwoo5eicyi::::res://assets/enemies/enemies/Koopa_Shell.png<>uid://deqxjro85hc5l::::res://assets/enemies/enemies/Koopa_Walk1.png<>uid://wv4eq6sspap7::::res://assets/enemies/enemies/Koopa_Walk2.png
+main.tscn::PackedScene::7849535938763871431::1758540412::0::1::::<><><>0<>0<><>::uid://wiy6fppa3nfc::::res://scenes/player.tscn<>uid://bhbtmomr8xjfs::::res://scenes/koopa.tscn<>uid://b78m1yqc8bjoi::::res://scenes/goomba.tscn
+player.tscn::PackedScene::1562182435978101600::1758540394::0::1::::<><><>0<>0<><>::uid://cdw7hf64a6uph::::res://assets/Mario/mario.png<>uid://bbdpqwr67j8vj::::res://Resources/CollisionShapes/small_mario.tres
+::res://Scripts/::1758541562
+enemy.gd::GDScript::2614005441471036557::1758541287::0::1::::Enemy<>Area2D<><>0<>0<><>::
+koopa.gd::GDScript::6962061720797746937::1758540972::0::1::::<>Enemy<><>0<>0<><>::
 player.gd::GDScript::8571161111115834423::1758537251::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
