@@ -1,4 +1,3 @@
 res://scenes/koopa.tscn
-res://scenes/goomba.tscn
-res://Scripts/goomba.gd
+res://Scripts/enemy.gd
 res://Scripts/koopa.gd

@@ -13,14 +13,14 @@ tile_set = SubResource("TileSet_sgp6g")
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
 
-[node name="enemies" type="Node" parent="."]
+[node name="Enemies" type="Node" parent="."]
 
-[node name="Koopa" parent="enemies" instance=ExtResource("2_sugp2")]
+[node name="Koopa" parent="Enemies" instance=ExtResource("2_sugp2")]
 position = Vector2(84, 24)
 collision_layer = 4
 collision_mask = 9
 
-[node name="Goomba" parent="enemies" instance=ExtResource("3_jyhfs")]
+[node name="Goomba" parent="Enemies" instance=ExtResource("3_jyhfs")]
 position = Vector2(44, 25)
 collision_layer = 4
 collision_mask = 9

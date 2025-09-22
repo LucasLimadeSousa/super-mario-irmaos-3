@@ -1,11 +1,9 @@
-extends Area2D
-
-class_name Enemy
+class_name Enemy extends Area2D
 
 @export var horizontal_speed: int = 20
 @export var vertical_speed:int = 100
 
-@onready var ray_cast_2d: RayCast2D = $RayCast2D
+@onready var ray_cast_2d = $RayCast2d as RayCast2D
 @onready var animated_sprite_2d = $AnimatedSprite2d as AnimatedSprite2D
 
 func _process(delta: float) -> void:
@@ -32,7 +30,7 @@ func die_from_hit():
 	die_tween.chain().tween_property(self, "position", position + Vector2(0, 500), 4)
 	
 func _on_area_entered(area):
-	if area is Koopa and (area as Koopa).in_a_shell and (area as Koppa).horizontal_speed:
+	if area is Koopa and (area as Koopa).in_a_shell and (area as Koppa).horizontal_speed != 0:
 		die_from_hit()
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
