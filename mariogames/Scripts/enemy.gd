@@ -30,7 +30,7 @@ func die_from_hit():
 	die_tween.chain().tween_property(self, "position", position + Vector2(0, 500), 4)
 	
 func _on_area_entered(area):
-	if area is Koopa and (area as Koopa).in_a_shell and (area as Koppa).horizontal_speed != 0:
+	if area is Koopa and (area as Koopa).in_a_shell and (area as Koopa).horizontal_speed != 0:
 		die_from_hit()
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
