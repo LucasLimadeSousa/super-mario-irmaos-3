@@ -1,4 +1,4 @@
-res://scenes/main.tscn
-res://Resources/CollisionShapes/koopa_full.tres
-res://Scripts/enemy.gd
-res://scenes/koopa.tscn
+res://scenes/player.tscn
+res://Scripts/player.gd
+res://points_label.tscn
+res://points_label.gd

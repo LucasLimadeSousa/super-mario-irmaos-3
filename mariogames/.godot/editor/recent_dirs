@@ -1,5 +1,6 @@
-res://Resources/CollisionShapes
+res://
 res://Scripts
+res://assets/Mario
+res://Resources/CollisionShapes
 res://assets/enemies/enemies
 res://scenes
-res://assets/Mario

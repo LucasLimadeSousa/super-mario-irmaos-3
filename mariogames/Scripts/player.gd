@@ -20,6 +20,12 @@ enum PlayerMode{
 @export var jump_velocity:int = -350
 @export_group("")
 
+@export_group("Stomping Enemies")
+@export var min_stomp_degree = 35
+@export var max_stomp_degree = 145
+@export var stomp_y_velocity = -150
+@export_group("")
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -38,6 +44,18 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	
-	
-		
-		
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area is Enemy:
+		handle_enemy_collision(area)
+func handle_enemy_collision(enemy : Enemy):
+	if enemy == null:
+		return
+	if is_instance_of(enemy, Koopa) and (enemy as Koopa).in_a_shell:
+		(enemy as Koopa).on_stomp(global_position)
+	else:
+		var angle_of_collision = rad_to_deg(position.angle_to_point(enemy.position))
+		if angle_of_collision > min_stomp_degree && max_stomp_degree > angle_of_collision:
+			enemy.die()
+			on_enemy_stomped()
+func on_enemy_stomped():
+	velocity.y = stomp_y_velocity
