@@ -31,12 +31,15 @@ animations = [{
 size = Vector2(12, 14)
 
 [node name="Goomba" type="Area2D"]
+collision_layer = 4
+collision_mask = 11
 script = ExtResource("1_l0j8n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3hfl1")
 animation = &"walk"
 autoplay = "walk"
+frame_progress = 0.13060115
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5lml2")
@@ -44,6 +47,7 @@ shape = SubResource("RectangleShape2D_5lml2")
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 8)
 collision_mask = 18
+collide_with_areas = true
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 

@@ -1,4 +1,5 @@
+res://scenes/koopa.tscn
+res://Scripts/enemy.gd
+res://scenes/goomba.tscn
 res://scenes/player.tscn
-res://Scripts/player.gd
-res://points_label.tscn
-res://points_label.gd
+res://scenes/main.tscn

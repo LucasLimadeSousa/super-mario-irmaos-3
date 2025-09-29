@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dqbyjse80gvd"]
 
-[ext_resource type="Script" uid="uid://cyhaems14wkek" path="res://points_label.gd" id="1_thuy6"]
+[ext_resource type="Script" uid="uid://cyhaems14wkek" path="res://Scripts/points_label.gd" id="1_ioret"]
 
 [node name="PointsLabel" type="Label"]
 offset_right = 40.0
@@ -9,4 +9,4 @@ theme_override_font_sizes/font_size = 10
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("1_thuy6")
+script = ExtResource("1_ioret")
