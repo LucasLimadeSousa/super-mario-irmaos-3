@@ -1,13 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://bhbtmomr8xjfs"]
+[gd_scene load_steps=8 format=3 uid="uid://bhbtmomr8xjfs"]
 
 [ext_resource type="Script" uid="uid://c6gqe0d4jmftp" path="res://Scripts/koopa.gd" id="1_k1qtu"]
 [ext_resource type="Texture2D" uid="uid://iluwoo5eicyi" path="res://assets/enemies/enemies/Koopa_Shell.png" id="1_py2lt"]
+[ext_resource type="Texture2D" uid="uid://crlxgpkdxvr4c" path="res://assets/enemies/enemies/Koopa_Shell_empty.png" id="2_grttc"]
 [ext_resource type="Texture2D" uid="uid://deqxjro85hc5l" path="res://assets/enemies/enemies/Koopa_Walk1.png" id="2_k1qtu"]
 [ext_resource type="Texture2D" uid="uid://wv4eq6sspap7" path="res://assets/enemies/enemies/Koopa_Walk2.png" id="3_xum81"]
 [ext_resource type="Shape2D" uid="uid://dopsus1ce2t25" path="res://Resources/CollisionShapes/koopa_full.tres" id="5_xum81"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_grttc"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_grttc")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_py2lt")
@@ -35,7 +44,7 @@ script = ExtResource("1_k1qtu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_grttc")
-animation = &"walk"
+animation = &"dead"
 autoplay = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
