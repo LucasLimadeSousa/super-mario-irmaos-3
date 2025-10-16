@@ -1,6 +1,8 @@
+TileMapLayer
+Sprite2D
+Node
 Label
 VisibleOnScreenNotifier2D
-Node
 AnimatedSprite2D
 CollisionShape2D
 RayCast2D

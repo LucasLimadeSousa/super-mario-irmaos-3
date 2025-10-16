@@ -199,7 +199,7 @@ script = ExtResource("1_qhqgy")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tuyoq")
 animation = &"subindo_Pequeno"
-frame_progress = 0.6528806
+frame_progress = 0.652881
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 6

@@ -48,7 +48,7 @@ animation = &"dead"
 autoplay = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.9999951, 4.999998)
+position = Vector2(0.999995, 5)
 scale = Vector2(22, 22)
 shape = ExtResource("5_xum81")
 
