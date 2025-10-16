@@ -1,8 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://wiy6fppa3nfc"]
+[gd_scene load_steps=26 format=3 uid="uid://wiy6fppa3nfc"]
 
 [ext_resource type="Texture2D" uid="uid://cdw7hf64a6uph" path="res://assets/Mario/mario.png" id="1_g2els"]
 [ext_resource type="Script" uid="uid://dud61hsy1736j" path="res://Scripts/player.gd" id="1_qhqgy"]
 [ext_resource type="Shape2D" uid="uid://bbdpqwr67j8vj" path="res://Resources/CollisionShapes/small_mario.tres" id="2_qhqgy"]
+[ext_resource type="Shape2D" uid="uid://b5avverqk1irx" path="res://Resources/CollisionShapes/big_mario.tres" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r5pv"]
 atlas = ExtResource("1_g2els")
@@ -195,19 +196,33 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
 script = ExtResource("1_qhqgy")
+jump_velocity = -700
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.0937519, 11.000001)
+scale = Vector2(1.5945511, 1.7916666)
 sprite_frames = SubResource("SpriteFrames_tuyoq")
-animation = &"subindo_Pequeno"
-frame_progress = 0.652881
+animation = &"direita_Pequeno"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 6
 
-[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="Colisão_Pequenho" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1.5, 2)
 shape = ExtResource("2_qhqgy")
 
-[node name="BodyCollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Colisão_Grande" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, 15)
+shape = ExtResource("4_dqkch")
+disabled = true
+
+[node name="Colisão_Pequeno" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2)
 shape = ExtResource("2_qhqgy")
+
+[node name="Colisão_Grande" type="CollisionShape2D" parent="."]
+position = Vector2(1, 15)
+shape = ExtResource("4_dqkch")
+disabled = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -49,6 +49,17 @@ target_position = Vector2(0, 8)
 collision_mask = 18
 collide_with_areas = true
 
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+rotation = -1.3805554
+target_position = Vector2(1.3236684, 6.8737106)
+collision_mask = 18
+collide_with_areas = true
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+target_position = Vector2(-7, 0)
+collision_mask = 18
+collide_with_areas = true
+
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

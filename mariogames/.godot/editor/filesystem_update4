@@ -1,6 +1,2 @@
-res://scenes/main.tscn
-res://scenes/player.tscn
 res://scenes/goomba.tscn
-res://scenes/koopa.tscn
-res://scenes/points_label.tscn
-res://main2.tscn
+res://Scripts/enemy.gd
