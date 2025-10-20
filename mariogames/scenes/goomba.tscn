@@ -32,14 +32,13 @@ size = Vector2(12, 14)
 
 [node name="Goomba" type="Area2D"]
 collision_layer = 4
-collision_mask = 11
+collision_mask = 27
 script = ExtResource("1_l0j8n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3hfl1")
-animation = &"walk"
+animation = &"dead"
 autoplay = "walk"
-frame_progress = 0.130601
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5lml2")

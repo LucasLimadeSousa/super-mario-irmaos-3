@@ -14,11 +14,8 @@ func _process(delta: float) -> void:
 	position.x -= horizontal_speed * delta
 	
 	if !ray_cast_2d.is_colliding():
-		position.y += vertical_speed * delta
-	if !ray_cast_2d_2.is_colliding():
-		position.x += vertical_speed * delta
-	if !ray_cast_2d_3.is_colliding():
-		position.x -= vertical_speed * delta
+		position.y += vertical_speed * delta	
+
 
 func die():
 	horizontal_speed = 0

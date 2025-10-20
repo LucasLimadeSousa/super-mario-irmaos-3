@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca57vst5ifqpf"]
+
+[ext_resource type="Texture2D" uid="uid://2md7518ep2w4" path="res://Imagens/mamario (2).png" id="1_q47yv"]
+[ext_resource type="FontFile" uid="uid://dwjdd6t762ows" path="res://Imagens/PixelifySans-VariableFont_wght.ttf" id="2_8mbx0"]
+[ext_resource type="Script" uid="uid://bvjttdvme3bks" path="res://Tela_Inicial.gd" id="2_8xosd"]
+[ext_resource type="Script" uid="uid://bfkqcsbr2nt7r" path="res://play.gd" id="3_8xosd"]
+
+[node name="tela inicial" type="Sprite2D"]
+position = Vector2(577.49994, 323.99997)
+scale = Vector2(1.0026041, 0.64285713)
+texture = ExtResource("1_q47yv")
+script = ExtResource("2_8xosd")
+
+[node name="Play" type="Button" parent="."]
+offset_left = -85.27786
+offset_right = 59.34552
+offset_bottom = 84.00006
+theme_override_fonts/font = ExtResource("2_8mbx0")
+theme_override_font_sizes/font_size = 50
+text = "Play"
+script = ExtResource("3_8xosd")
+
+[node name="Sair" type="Button" parent="."]
+offset_left = -85.27788
+offset_top = 98.00008
+offset_right = 59.345505
+offset_bottom = 180.44447
+theme_override_fonts/font = ExtResource("2_8mbx0")
+theme_override_font_sizes/font_size = 50
+text = "Sair"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]
