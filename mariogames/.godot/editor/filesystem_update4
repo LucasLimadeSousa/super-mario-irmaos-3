@@ -1,5 +1,2 @@
-res://Scripts/enemy.gd
 res://scenes/main.tscn
-res://scenes/player.tscn
-res://Scripts/goomba.gd
-res://scenes/goomba.tscn
+res://Resources/CollisionShapes/small_mario.tres
