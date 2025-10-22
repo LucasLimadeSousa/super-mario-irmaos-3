@@ -8,7 +8,7 @@ const POINTS_LABEL_SCENE = preload("res://scenes/points_label.tscn")
 @onready var ray_cast_2d = $RayCast2D as RayCast2D
 @onready var ray_cast_2d_2 = $RayCast2D2 as RayCast2D
 @onready var ray_cast_2d_3 = $RayCast2D3 as RayCast2D
-@onready var animated_sprite_2d = $AnimatedSprite2d as AnimatedSprite2D
+@onready var animated_sprite_2d = $AnimatedSprite2D as AnimatedSprite2D
 
 func _process(delta: float) -> void:
 	position.x -= horizontal_speed * delta

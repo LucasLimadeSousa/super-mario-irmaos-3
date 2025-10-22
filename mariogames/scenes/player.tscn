@@ -132,7 +132,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"direita_Pequeno",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -143,6 +143,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"morte",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2els")
+}],
+"loop": true,
+"name": &"parado",
 "speed": 5.0
 }, {
 "frames": [{
@@ -196,6 +204,8 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
 script = ExtResource("1_qhqgy")
+run_speed_danping = 5.0
+run_atrition = 1.2
 jump_velocity = -700
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

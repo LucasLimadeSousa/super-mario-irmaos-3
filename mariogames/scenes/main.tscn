@@ -3957,6 +3957,12 @@ tile_set = SubResource("TileSet_tefeu")
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
 position = Vector2(62, 431)
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = -132
+limit_top = -222
+limit_right = 7100
+limit_bottom = 1730
+
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Goomba" parent="Enemies" instance=ExtResource("3_jyhfs")]

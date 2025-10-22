@@ -19,36 +19,45 @@ const POINTS_LABEL_SCENE = preload("res://scenes/points_label.tscn")
 
 @export_group("Locomotion")
 @export var run_speed_danping:float = 0.5
+@export var run_atrition:float = 1.5
 @export var speed:float = 100.0
 @export var jump_velocity:int = -350
 @export_group("")
 
 @export_group("Stomping Enemies")
-@export var min_stomp_degree = 35
-@export var max_stomp_degree = 145
-@export var stomp_y_velocity = -150
+@export var min_stomp_degree : int = 35
+@export var max_stomp_degree : int = 145
+@export var stomp_y_velocity : int = -150
 @export_group("")
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player_mode = PlayerMode.SMALL
 var is_dead = false
+var is_floor = true
 
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
+		is_floor = false
+		animated_sprite_2d.play("pulo_Direita_Pequeno")
 		velocity.y += gravity * delta
-	if Input.is_action_pressed("jump") and is_on_floor():
+	else:
+		is_floor = true
+	if Input.is_action_pressed("jump") and is_floor:
 		velocity.y = jump_velocity
+		animated_sprite_2d.play("pulo_Direita_Pequeno")
 	if Input.is_action_just_pressed("jump") and velocity.y < 0: 
 		velocity.y *= 0.5
 	var diretion = Input.get_axis("left","right")
-	
 	if diretion:
+		animated_sprite_2d.flip_h = velocity.x < 0
+		if is_floor && not animated_sprite_2d.animation == "direita_Pequeno":
+			animated_sprite_2d.play("direita_Pequeno")
 		velocity.x = lerp(velocity.x, speed * diretion, run_speed_danping * delta)
 	else:
-		velocity.x = move_toward(velocity.x, 0, speed * delta)
-	
-	#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		velocity.x = move_toward(velocity.x, 0, pow(speed,run_atrition) *delta)
+		if is_floor:
+			animated_sprite_2d.play("parado")
 	move_and_slide()
 	
 	

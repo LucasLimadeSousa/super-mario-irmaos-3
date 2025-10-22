@@ -1,2 +1,5 @@
+res://scenes/player.tscn
+res://Scripts/player.gd
 res://scenes/main.tscn
-res://Resources/CollisionShapes/small_mario.tres
+res://scenes/goomba.tscn
+res://castelo.tscn
