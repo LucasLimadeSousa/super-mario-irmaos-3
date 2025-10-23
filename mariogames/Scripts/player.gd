@@ -20,7 +20,7 @@ const POINTS_LABEL_SCENE = preload("res://scenes/points_label.tscn")
 @export_group("Locomotion")
 @export var run_speed_danping:float = 0.5
 @export var run_atrition:float = 1.5
-@export var speed:float = 100.0
+@export var speed:float = 150.0
 @export var jump_velocity:int = -350
 @export_group("")
 
@@ -39,20 +39,20 @@ var is_floor = true
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		is_floor = false
-		animated_sprite_2d.play("pulo_Direita_Pequeno")
+		animated_sprite_2d.play("pulo")
 		velocity.y += gravity * delta
 	else:
 		is_floor = true
 	if Input.is_action_pressed("jump") and is_floor:
 		velocity.y = jump_velocity
-		animated_sprite_2d.play("pulo_Direita_Pequeno")
+		animated_sprite_2d.play("pulo")
 	if Input.is_action_just_pressed("jump") and velocity.y < 0: 
 		velocity.y *= 0.5
 	var diretion = Input.get_axis("left","right")
 	if diretion:
 		animated_sprite_2d.flip_h = velocity.x < 0
-		if is_floor && not animated_sprite_2d.animation == "direita_Pequeno":
-			animated_sprite_2d.play("direita_Pequeno")
+		if is_floor && not animated_sprite_2d.animation == "andando":
+			animated_sprite_2d.play("andando")
 		velocity.x = lerp(velocity.x, speed * diretion, run_speed_danping * delta)
 	else:
 		velocity.x = move_toward(velocity.x, 0, pow(speed,run_atrition) *delta)
@@ -60,7 +60,10 @@ func _physics_process(delta: float) -> void:
 			animated_sprite_2d.play("parado")
 	move_and_slide()
 	
-	
+func _process(delta):
+	if Input.is_action_pressed("down"):
+		animated_sprite_2d.play("agachado")
+		velocity.x = 0
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area is Enemy:
 		handle_enemy_collision(area)
@@ -91,7 +94,7 @@ func spawn_points_label(enemy):
 func die():
 	if player_mode == PlayerMode.SMALL:
 		is_dead = true
-		animated_sprite_2d.play("small_death")
+		animated_sprite_2d.play("morte")
 		set_physics_process(false)
 
 	var death_tween = get_tree().create_tween()

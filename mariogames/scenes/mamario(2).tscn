@@ -6,25 +6,25 @@
 [ext_resource type="Script" uid="uid://bfkqcsbr2nt7r" path="res://play.gd" id="3_8xosd"]
 
 [node name="tela inicial" type="Sprite2D"]
-position = Vector2(577.49994, 323.99997)
-scale = Vector2(1.0026041, 0.64285713)
+position = Vector2(577.5, 324)
+scale = Vector2(1.0026, 0.642857)
 texture = ExtResource("1_q47yv")
 script = ExtResource("2_8xosd")
 
 [node name="Play" type="Button" parent="."]
-offset_left = -85.27786
-offset_right = 59.34552
-offset_bottom = 84.00006
+offset_left = -85.2779
+offset_right = 59.3455
+offset_bottom = 84.0001
 theme_override_fonts/font = ExtResource("2_8mbx0")
 theme_override_font_sizes/font_size = 50
 text = "Play"
 script = ExtResource("3_8xosd")
 
 [node name="Sair" type="Button" parent="."]
-offset_left = -85.27788
-offset_top = 98.00008
-offset_right = 59.345505
-offset_bottom = 180.44447
+offset_left = -85.2779
+offset_top = 98.0001
+offset_right = 59.3455
+offset_bottom = 180.444
 theme_override_fonts/font = ExtResource("2_8mbx0")
 theme_override_font_sizes/font_size = 50
 text = "Sair"

@@ -43,21 +43,25 @@ collision_mask = 9
 script = ExtResource("1_k1qtu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -7.5)
+scale = Vector2(1.625, 1.625)
 sprite_frames = SubResource("SpriteFrames_grttc")
-animation = &"dead"
+animation = &"walk"
 autoplay = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.999995, 5)
+position = Vector2(4.5, 4.5)
 scale = Vector2(22, 22)
 shape = ExtResource("5_xum81")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(3, 0)
 target_position = Vector2(0, 12)
 collision_mask = 18
 collide_with_areas = true
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(3, 2)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

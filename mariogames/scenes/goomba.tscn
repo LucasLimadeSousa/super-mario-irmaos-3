@@ -27,42 +27,30 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5lml2"]
-size = Vector2(11, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0j8n"]
 
 [node name="Goomba" type="Area2D"]
-collision_layer = 4
+collision_layer = 5
 collision_mask = 27
 script = ExtResource("1_l0j8n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-9.536743e-07, -3.4999998)
+position = Vector2(-9.53674e-07, -3.5)
 scale = Vector2(1.5, 1.4375)
 sprite_frames = SubResource("SpriteFrames_3hfl1")
 animation = &"walk"
 autoplay = "walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -3)
-shape = SubResource("RectangleShape2D_5lml2")
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_l0j8n")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(0, 8)
-collision_mask = 18
-collide_with_areas = true
-
-[node name="RayCast2D2" type="RayCast2D" parent="."]
-rotation = -1.3805554
-target_position = Vector2(1.3236684, 6.8737106)
-collision_mask = 18
-collide_with_areas = true
-
-[node name="RayCast2D3" type="RayCast2D" parent="."]
-target_position = Vector2(-7, 0)
+target_position = Vector2(0, 11)
 collision_mask = 18
 collide_with_areas = true
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, -4)
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
