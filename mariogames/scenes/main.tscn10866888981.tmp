@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bhbtmomr8xjfs" path="res://scenes/koopa.tscn" id="4_jyhfs"]
 [ext_resource type="Script" uid="uid://wc385qfjwgk1" path="res://Scripts/Fall_zone.gd" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://7141uy2r5b1k" path="res://scenes/moeda.tscn" id="7_o6xl0"]
-[ext_resource type="Script" uid="uid://bmhlb73seeb7g" path="res://Scripts/teleport.gd" id="7_tipki"]
+[ext_resource type="Script" uid="uid://bmhlb73seeb7g" path="res://scenes/teleport.gd" id="7_tipki"]
 [ext_resource type="Script" uid="uid://vyu441q24o6a" path="res://scenes/canos.gd" id="9_85g3d"]
 [ext_resource type="Script" uid="uid://dwf54dy6njxkh" path="res://scenes/cano_c.gd" id="10_choun"]
 
@@ -4000,7 +4000,7 @@ position = Vector2(-5120, -235)
 script = ExtResource("6_tefeu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fall_zones/fall_zone"]
-position = Vector2(84, -22)
+position = Vector2(93, -48)
 shape = SubResource("RectangleShape2D_tbgi4")
 metadata/_edit_group_ = true
 

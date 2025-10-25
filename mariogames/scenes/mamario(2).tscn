@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://2md7518ep2w4" path="res://Imagens/mamario (2).png" id="1_q47yv"]
 [ext_resource type="FontFile" uid="uid://dwjdd6t762ows" path="res://Imagens/PixelifySans-VariableFont_wght.ttf" id="2_8mbx0"]
-[ext_resource type="Script" uid="uid://bvjttdvme3bks" path="res://Tela_Inicial.gd" id="2_8xosd"]
-[ext_resource type="Script" uid="uid://bfkqcsbr2nt7r" path="res://play.gd" id="3_8xosd"]
+[ext_resource type="Script" uid="uid://bvjttdvme3bks" path="res://Scripts/Tela_Inicial.gd" id="2_8xosd"]
+[ext_resource type="Script" uid="uid://bfkqcsbr2nt7r" path="res://Scripts/play.gd" id="3_8xosd"]
 
 [node name="tela inicial" type="Sprite2D"]
 position = Vector2(577.5, 324)
